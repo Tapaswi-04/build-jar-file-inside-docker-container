@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: tapaswibuildjarfileinsidedockercontainer 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tapaswibuildjarfileinsidedockercontainer
+  template:
+    metadata:
+      labels:
+        app: tapaswibuildjarfileinsidedockercontainer 
+    spec:
+      containers:
+        - name: tapaswibuildjarfileinsidedockercontainer 
+          image: myappreg.azurecr.io/tapaswibuildjarfileinsidedockercontainer
+          ports:
+          - containerPort: 80
