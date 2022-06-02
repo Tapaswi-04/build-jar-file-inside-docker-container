@@ -11,9 +11,9 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '627ff815-1416-4d83-84ed-a4ffa2a39e27'
+  dockerRegistryServiceConnection: 'acr-connection'
   imageRepository: 'tapaswibuildjarfileinsidedockercontainer'
-  containerRegistry: 'myappreg.azurecr.io'
+  containerRegistry: 'sampledeploymentacr.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'myappreg2587ca63-auth'
